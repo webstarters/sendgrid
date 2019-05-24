@@ -44,6 +44,10 @@ class WS_SendGrid
         if (! defined('WS_SENDGRID_DEFAULT_TEMPLATE_ID')) {
             define('WS_SENDGRID_DEFAULT_TEMPLATE_ID', '');
         }
+
+        if (! defined('WS_SENDGRID_OVERWRITE_WP_MAIL')) {
+            define('WS_SENDGRID_OVERWRITE_WP_MAIL', true);
+        }
     }
 
     protected static function getFromEmail()

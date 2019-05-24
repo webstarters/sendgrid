@@ -63,7 +63,7 @@ if (! version_compare(PHP_VERSION, '7.1', '>=')) {
         }
     }
 
-    if (! function_exists('wp_mail')) {
+    if (! function_exists('wp_mail') && WS_SENDGRID_OVERWRITE_WP_MAIL) {
         /**
          * Overwrite the wp_mail function to send through SendGrid.
          *
