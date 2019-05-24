@@ -4,7 +4,7 @@
     Plugin Name: Webstarters SendGrid
     Plugin URI: https://webstarters.dk
     Description: A plugin from Webstarters for integration with SendGrid
-    Version: 1.0.0
+    Version: 0.1.0
     Author: Webstarters
     Author URI: https://webstarters.dk
 */
