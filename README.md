@@ -31,6 +31,38 @@ This plugin overwrites ```wp_mail``` to send via SendGrid.
 
 You can also send mail via the new ```sendgrid_mail``` method, which extends wp_mail, but adds the possibility of specifying template data and ID.
 
+### Example
+
+```php
+<?php
+
+$to = 'Peter Jørgensen <pj@webstarters.dk>';
+
+$subject = 'Hello';
+
+$message = 'Hello World!';
+
+$headers = [
+    'Cc: Peter Jørgensen <pj@webstarters.dk>',
+    'Bcc: Peter Jørgensen <pj@webstarters.dk>',
+    'Reply-To: Peter Jørgensen <pj@webstarters.dk>',
+];
+
+$attachments = [
+    'https://via.placeholder.com/1280x720',
+];
+
+$templateData = [
+    'foo' => 'bar',
+];
+
+$templateId = 'd-cf81460749c34cd697916aa4760f552c';
+
+$success = sendgrid_mail($to, $subject, $message, $headers, $attachments, $templateData, $templateId);
+
+echo $success;      
+```
+
 ### Debugging
 
 To begin, enable ```WP_DEBUG``` and ```WP_DEBUG_LOG``` in the ```wp_config.php``` file.
